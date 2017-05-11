@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html> <!--Indica que a pagina esta na versão HTML-->
+<html>
+<head>
+    <!--Padrão de caracteres com ascentuação-->
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="Content/estilo.css"/>
+    <link type="text/css" rel="stylesheet" href="Content/bootstrap.css" />
+    <title>Demo HTML</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h1 class="page-header">Treinamento JavaScript</h1>
+    <p>Esse formulário será utilizado para demonstrar alguns recursos de JavaScript</p>
+    <br/>
+    <form class="form-inline" id="frmInput">
+        <div class="row well">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Dados de Entrada</legend>
+
+                    <label id="lblNome" for="nome">Nome</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input required type="text" class="form-control" name="nome" placeholder="Informe o seu nome"/>
+                    </div>
+
+                    <label id="lblAnoNascimento" for="AnoNascimento">Ano de Nascimento</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        <input required type="number" class="form-control" name="AnoNascimento" placeholder="Informe no ano do nascimento"/>
+                    </div>
+                </fieldset>
+    
+            </div>
+        </div>
+        <div class="row">
+            <div class="alert-danger">
+                Atenção ! necessário informar todos os dados
+            </div>
+        </div>
+        <br/>
+        <div class="row well">
+            <div class="col-md-6">
+                <a id="btnAdicionar" onclick="document.getElementById('frmInput').submit()" href="#" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Cadastrar</a>
+                <a id="btnGerarJSon" onclick="alert('Implementar geração do JSon')" href="#" class="btn btn-default"><span class="glyphicon glyphicon-file"></span> Gerar Json</a>
+
+            </div>
+        </div>
+
+    </form>
+    <table class="table">
+        <caption>Relação das pesquisas</caption>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>ANo de Nascimento</th>
+            <th>Idade</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>Relação dos items finalizado</td>
+        </tr>
+        </tfoot>
+    </table>
+
+</div>
+<script type="text/javascript" src="codigo.js">
+    
+</script>
+</body>
+</html>

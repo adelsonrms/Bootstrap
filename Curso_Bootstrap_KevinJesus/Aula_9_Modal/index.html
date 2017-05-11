@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Curso de bootstrap 3</title>
+    <meta name="description" content="curso de bootstrap 3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="container">
+    <a href="javascript.html" class="btn btn-link">JavaScript</a>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <!--
+        A magica do botão aqui é a seguinte :
+        Ao atribuir o 'data-target' #JanelaModal e o 'data-toggle', será disparado um evento click (jquery) que irá abrir a janela modal
+        São esses atributos que faz com que o codigo interno JQuery do Bootstrap dispara a abertura do Modal
+        -->
+
+        <div class="btn-group-lg">
+            <div data-toggle="tooltip" title="Tooltip - Clique aqui para abrir os detalhes" data-placement="left">
+            </div>
+            <button class="btn btn-default btn-primary btn-group-lg" data-toggle="modal" data-target="#JanelaModal">Abrir Pop-up</button>
+
+            <!--Utilizando o componente Popover
+            data-toggle="popover" faz o link para o JQuery
+            data-content= onde fica a mensagem
+            title : o titulo aparece em cima -->
+            <button id="botaoPopover" class="btn btn-default btn-info btn-group-lg" data-toggle="popover" data-content="<div id='data'></div>Olá Seja bem vindo ! <br/> Essa é uma demonstração de como se utiliza o componente Popover no Bootstrap" title="Titulo da Mensagem" data-placement="bottom">Abrir Pop-over</button>
+        </div>
+
+
+        <div class="modal fade" id="JanelaModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!------------------------------------------------------------------------------------------------
+                    Cabeçalho do popup modal
+                    ------------------------------------------------------------------------------------------------>
+                    <!--Onde fica localizado o titulo da janela e o botão X para fechar-->
+                    <div class="modal-header">
+                        <!--Botão fechar-->
+                        <button class="close" data-dismiss="modal" aria-label="Close"><span arial-hidden="true"></span></button>
+                        <!--Titulo-->
+                        <h3 class="modal-title">Detalhes</h3>
+                    </div>
+                    <!------------------------------------------------------------------------------------------------
+                    Corpo do Dialog Modal - Conteudo
+                    ------------------------------------------------------------------------------------------------>
+                    <div class="modal-body">
+                        Aqui ficará o contedudo do corpo do modal
+                        Abaixo será iniciado um formulário
+                        <div class="row"><br/>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <form class="form-horizontal">
+
+                                    <label>Nome:</label><br/>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="text" id="nome" name="nome" placeholder="Informe o nome do usuario" class="form-control" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <label>Email:</label><br/>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                        <input type="email" id="email" name="email" placeholder="Informe o e-mail" class="form-control" aria-describedby="basic-addon1">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <form class="form-horizontal">
+                                    <label>Sobrenome:</label>
+                                    <input class="form-control" type="text"/>
+                                    <label>Endereco:</label>
+                                    <input class="form-control" type="email"/>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row"><br/>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel-success">
+                                    <div class="panel-heading">Informações do Cliente</div>
+                                    <div class="panel-body">Aqui ficará mais informações a respeito do formulário de cliente apresentado na modal</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------------------------------------------------------------------------
+                    Rodapé Modal
+                    ------------------------------------------------------------------------------------------------>
+                    <div class="modal-footer">
+                        <!--
+                        Para adicionar funcionalidade de clique do botão é necessário incluir os atributos data-
+                        data-dismiss="modal" > Fecha o formulário
+                        -->
+                        <button class="btn btn-success" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script>
+
+    //Esse evento chamará a função OnClose() quando o modal estiver fechando...
+    //As ações que são executadas aqui estão descritas em funções criadas logo abaixo
+    $('#JanelaModal').on('hide.bs.modal', OnClose());
+    $('#JanelaModal').on('hidden.bs.modal', ModalFechado());
+
+    //As proximas ações dos eventos serão executadas em funções anonimas, ou seja, diretamente no argumento
+    //Seleciona o elemento atraves do ID
+    //O metodo 'on()' permite que seja definido um evento que será disparado no JQuery
+    $('#JanelaModal').on('show.bs.modal',
+        function() {
+            //Aqui é uma função anonima
+            //Seleciona o nome
+            console.log('Seleciona o elemento input com ID : nome');
+            $('#nome').val('Adelson Silva');
+            console.log('O Conteudo foi preenchido. Recupera o valor do input : ' + $('#nome').val());
+
+            $('#email').val('adelsons@gmail.com');
+
+        });
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    //Dica : Classe 'console' referenta a guia Console na ferramenta de desenvolvedor do Chrome
+    function OnClose() {
+        console.log('O modal está sendo fechado');
+    }
+
+
+    function ModalFechado() {
+        console.log('O modal ja está fechado');
+    }
+
+</script>
+
+<!--JQuery Script para o popover-->
+<script>
+
+    //Abre o popover no modo padrão
+    //$('[data-toggle="popover"]').popover();
+
+    /*Passando parametros opcionais que modifica o comportamento
+    Em forma de Json
+    placement : left, bottom, top ou right > Posicionamento de onde aparecerá. Prevalece sobre o atributo
+    html:true ou false > Permite ou nao interpretar tags html no data-content
+    */
+    $('[data-toggle="popover"]').popover({
+        placement: "left",
+        html: "true",
+        animation: "false"
+    });
+
+    //Trabalhando alguns eventos
+    $('#botaoPopover').on('show.bs.popover',
+        function() {
+
+            $('#data').val('adelsons@gmail.com');
+
+        });
+
+
+</script>
+</body>
+</html>

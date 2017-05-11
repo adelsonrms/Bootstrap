@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    
+    <meta charset="UTF-8"/>
+    <title>Demo - JQuery</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="file:///D:/Data/Dev/Web/Bootstrap/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="datePicker.css"/>
+
+    <script>
+        $(document).ready(function() {
+            //alert('Alo Mundo');
+        });
+
+    </script>
+
+    <style>
+        body {
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body >
+<h1 class="page-header">Utilizando Bootstrap</h1>
+<div class="well col-md-6">
+    <form>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Informe os dados do usuário</legend>
+                    <label>Usuario</label><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" name="nome" placeholder="Informe o nome do usuario" class="form-control" aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <label>Email</label><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="text" name="" class="form-control" placeholder="Informe o email" aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <label>Endereço</label><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="text" name="" class="form-control" placeholder="Informe o endereço" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <label>CPF</label><br>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="fa fa-calculator"></span></div>
+                        <input type="text" name="" class="form-control cpfMask editable-1" placeholder="Informe o CPF">
+                    </div>
+
+
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="masc"/><label> Masculino</label><br />
+                <input type="radio" name="sexo" id="fem" checked="checked"/><label> Feminino</label>
+            </fieldset>
+        </div>
+        <div class="row">
+            <a class="btn btn-default" href="#" role="button">Link</a>
+            <button type="button" class="btn btn-success">Success</button>
+        </div>
+
+    </form>
+    <br/>
+
+</div>
+<br/>
+
+</body>
+</html>

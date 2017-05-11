@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+ <!--Indica que a pagina esta na versão HTML-->
+<html>
+<head>
+    <!--Padrão de caracteres com ascentuação-->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Content/estilo.css" />
+    <link type="text/css" rel="stylesheet" href="Content/bootstrap.css" />
+    <title>Demo HTML</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Apresentando o Bootstrap</h2>
+
+        Demonstra como  criar estruturas dinamicas com HTML para Bootstrap
+
+        As classes : BordaLinha e BordaColuna estão definidas no estilo.css somente para visualizar as bordas.
+        No atributo class, as classes podem ser combinadas com as classes do Bootstrap
+
+    </div>
+
+
+    <div class="container" style="border: 10px">
+        <div class="row BordaLinha" id="linha1">
+            <!--Esse bloco js gera uma definição de 12 div com a class col-md-1 que representa 1 coluna dentro de uma row no Bootstrap-->
+            <script>
+            //Pega o elemento linha acima
+            var divLinha = document.getElementById('linha1');
+            var data = '', i = 1, col = i;
+            for (i;
+                i <= 12;
+                i ++) {
+                data += '<div class="col-md-' + col + ' col-xs-' + col + ' BordaColuna">Coluna ' + i + '</div>';
+            }
+            //Insere o trecho do codigo HTML dinamico
+            divLinha.insertAdjacentHTML('beforeend', data);
+            </script>
+        </div>
+
+        <!--Cria uma estrutura com uma linha e 4 colunas com tamanho 3 cada. Totalizando 12 -->
+        <div class="row BordaLinha" id="linha2">
+            <script>
+            var divLinha = document.getElementById('linha2');
+            var data = '', i = 2, col = i;
+            for (i;
+                i <= 12;
+                i += col) {
+                data += '<div class="col-md-' + col + ' col-xs-' + col + ' BordaColuna">Coluna ' + i + '</div>';
+            }
+            divLinha.insertAdjacentHTML('beforeend', data);
+            </script>
+        </div>
+
+        <!--Cria uma estrutura com uma linha e 4 colunas com tamanho 3 cada. Totalizando 12 -->
+        <div class="row BordaLinha" id="linha3">
+            <script>
+            var divLinha = document.getElementById('linha3');
+            var data = '', i = 4, col = i;
+            for (i;
+                i <= 12;
+                i += col) {
+                data += '<div class="col-md-' + col + ' col-xs-' + col + ' BordaColuna">Coluna ' + i + '</div>';
+            }
+            divLinha.insertAdjacentHTML('beforeend', data);
+            </script>
+        </div>
+
+
+        <!--Cria uma estrutura com uma linha e 4 colunas com tamanho 3 cada. Totalizando 12 -->
+        <div class="row BordaLinha" id="linha4">
+            <script>
+            var divLinha = document.getElementById('linha4');
+            var data = '', i = 6, col = i;
+            for (i;
+                i <= 12;
+                i += col)
+            {
+                data += '<div class="col-md-' + col + ' col-xs-' + col + ' BordaColuna">Coluna ' + i + '</div>';
+            }
+            divLinha.insertAdjacentHTML('beforeend', data);
+            </script>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

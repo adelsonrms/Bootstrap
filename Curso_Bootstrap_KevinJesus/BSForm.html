@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    
+    <meta charset="UTF-8"/>
+    <title>Demo - JQuery</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="file:///D:/Data/Dev/Web/Bootstrap/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="datePicker.css"/>
+
+    <script>
+        $(document).ready(function() {
+            //alert('Alo Mundo');
+        });
+
+    </script>
+
+    <style>
+        body {
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body >
+<h1 class="page-header">Utilizando Bootstrap</h1>
+<div class="well col-md-6">
+    <form>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Informe os dados do usuário</legend>
+                    <label>Usuario</label><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" name="nome" placeholder="Informe o nome do usuario" class="form-control" aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <label>Email</label><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="text" name="" class="form-control" placeholder="Informe o email" aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <label>Endereço</label><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="text" name="" class="form-control" placeholder="Informe o endereço" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <label>CPF</label><br>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="fa fa-calculator"></span></div>
+                        <input type="text" name="" class="form-control cpfMask editable-1" placeholder="Informe o CPF">
+                    </div>
+
+
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="masc"/><label> Masculino</label><br />
+                <input type="radio" name="sexo" id="fem" checked="checked"/><label> Feminino</label>
+            </fieldset>
+        </div>
+        <div class="row">
+            <a class="btn btn-default" href="#" role="button">Link</a>
+            <button type="button" class="btn btn-success">Success</button>
+        </div>
+
+    </form>
+    <br/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div id="dp-popup" class="dp-popup" >
+                <div class="dp-nav-prev">
+                    <a class="dp-nav-prev-year" href="javascript:;" title="Ano Anterior">&lt;&lt;</a>
+                    <a class="dp-nav-prev-month" href="javascript:;" title="Mês Anterior">&lt;</a>
+                </div>
+                <h4>Maio 2017</h4>
+                <div class="dp-nav-next">
+                    <a class="dp-nav-next-year" href="javascript:;" title="Próximo Ano">&gt;&gt;</a>
+                    <a class="dp-nav-next-month" href="javascript:;" title="Próximo Mês">&gt;</a>
+                </div>
+                <div class="dp-calendar">
+                    <table class="jCalendar">
+                        <thead>
+                        <tr>
+                            <th scope="col" abbr="Domingo" title="Domingo" class="weekend">D</th>
+                            <th scope="col" abbr="Segunda" title="Segunda" class="weekday">S</th>
+                            <th scope="col" abbr="Terça" title="Terça" class="weekday">T</th>
+                            <th scope="col" abbr="Quarta" title="Quarta" class="weekday">Q</th>
+                            <th scope="col" abbr="Quinta" title="Quinta" class="weekday">Q</th>
+                            <th scope="col" abbr="Sexta" title="Sexta" class="weekday">S</th>
+                            <th scope="col" abbr="Sábado" title="Sábado" class="weekend">S</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="other-month weekend ">30</td>
+                            <td class="current-month weekday ">1</td>
+                            <td class="current-month weekday ">2</td>
+                            <td class="current-month weekday ">3</td>
+                            <td class="current-month weekday ">4</td>
+                            <td class="current-month weekday today ">5</td>
+                            <td class="current-month weekend ">6</td>
+                        </tr>
+                        <tr>
+                            <td class="current-month weekend ">7</td>
+                            <td class="current-month weekday ">8</td>
+                            <td class="current-month weekday ">9</td>
+                            <td class="current-month weekday ">10</td>
+                            <td class="current-month weekday ">11</td>
+                            <td class="current-month weekday ">12</td>
+                            <td class="current-month weekend ">13</td>
+                        </tr>
+                        <tr>
+                            <td class="current-month weekend ">14</td>
+                            <td class="current-month weekday ">15</td>
+                            <td class="current-month weekday ">16</td>
+                            <td class="current-month weekday ">17</td>
+                            <td class="current-month weekday ">18</td>
+                            <td class="current-month weekday ">19</td>
+                            <td class="current-month weekend ">20</td>
+                        </tr>
+                        <tr>
+                            <td class="current-month weekend ">21</td>
+                            <td class="current-month weekday ">22</td>
+                            <td class="current-month weekday ">23</td>
+                            <td class="current-month weekday ">24</td>
+                            <td class="current-month weekday ">25</td>
+                            <td class="current-month weekday ">26</td>
+                            <td class="current-month weekend ">27</td>
+                        </tr>
+                        <tr>
+                            <td class="current-month weekend ">28</td>
+                            <td class="current-month weekday ">29</td>
+                            <td class="current-month weekday ">30</td>
+                            <td class="current-month weekday ">31</td>
+                            <td class="other-month weekday ">1</td>
+                            <td class="other-month weekday ">2</td>
+                            <td class="other-month weekend ">3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="todayExtend">Hoje:5 de Maio, 2017</div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+<br/>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+table.jCalendar {
+	background: #FFF;
+    border-collapse: separate;
+    border-spacing: 3px;
+}
+#calendar table.jCalendar {
+	background: none;
+    border-collapse: collapse;
+    border-spacing: 0px;	
+	width:100%;
+}
+table.jCalendar th {
+	background: #EEE;
+	color: #333;
+	font:10px Tahoma;
+	padding: 3px 0;
+	width:18px;
+	text-align:center;
+}
+#calendar table.jCalendar th {
+	background: #F0F0F0;
+	color: 	#CC092F;
+	font:11px Tahoma;
+	width:29px;
+	height:30px;
+	text-align:center;
+}
+table.jCalendar td {
+	background: #FFF;
+	color: #333;
+	font:11px Tahoma;
+	text-align: center;
+	padding: 3px 0;
+}
+#calendar table.jCalendar td {
+	background: none;
+	color: #333;
+	font:11px Tahoma;
+	text-align: center;
+	padding: 3px 0;
+}
+table.jCalendar td.other-month {
+	background: #FFF;
+	color: #AEAEAE;
+}
+#calendar table.jCalendar td.other-month {
+	background: none;
+	color: #999;
+}
+#calendar table.jCalendar td.other-month:hover {
+	background: none;
+	color: #999;
+}
+table.jCalendar td.today {
+	background: #FFF;
+	color: #333;
+}
+#calendar table.jCalendar td.today {
+	background: none;
+	color: #333;
+}
+table.jCalendar td.selected {
+	background: #BF0101;
+	color: #FFF;
+}
+#calendar table.jCalendar td.selected {
+	background: none;
+	color: #333;
+}
+table.jCalendar td.selected:hover {
+	background: #FFF7D9;
+	color: #BF0101;
+}
+#calendar table.jCalendar td.selected:hover {
+	background: none;
+	color: #333;
+}
+table.jCalendar td:hover, table.jCalendar td.dp-hover {
+	background: #FFF7D9;
+	color: #BF0101;
+}
+#calendar table.jCalendar td:hover, #calendar table.jCalendar td.dp-hover {
+	background: none;
+	color: #333;
+}
+table.jCalendar td.disabled, table.jCalendar td.disabled:hover {
+	background: #FFF;
+	color: #CCC;
+}
+#calendar table.jCalendar td.disabled, #calendar table.jCalendar td.disabled:hover {
+	color: #AEAEAE;
+	cursor: text;
+}
+
+/* For the popup */
+
+/* NOTE - you will probably want to style a.dp-choose-date - see how I did it in demo.css */
+
+.todayExtend {
+	font:10px Tahoma;
+	color:#333;
+	text-align:center;
+	border-top:solid 1px #E5E5E5;
+	padding-top:3px;
+}
+
+#calendar .todayExtend {
+	display:none;
+	font:10px Tahoma;
+	color:#333;
+	text-align:center;
+	border-top:solid 1px #E5E5E5;
+	padding-top:3px;
+}
+
+div.dp-popup {
+	position: relative;
+	background: #FFF;
+	font-size: 11px;
+	font-family: Tahoma, sans-serif;
+	border: 1px solid #CCC;
+	padding:3px;
+}
+
+#calendar div.dp-popup {
+	position: static;
+	background: #FFF;
+	font-size: 11px;
+	border:none;
+	font-family: Tahoma, sans-serif;
+	padding:0 9px;
+}
+
+div#dp-popup {
+	position: absolute;
+	z-index: 99999;
+}
+
+#calendar div#dp-popup {
+	position: static;
+	z-index: 99999;
+}
+
+div.dp-popup h4 {
+	font:bold 11px Tahoma;
+	color:#333;
+	text-align: center;
+	padding:5px 0;
+}
+
+#calendar .dp-calendar {
+	width:205px;
+	padding:0 1px 5px 1px;
+	background:url(../imagens/home/bgr_calendario.gif) bottom left no-repeat;
+	border-top:solid 1px #CCC;
+	clear:both;
+}
+
+#calendar div.dp-popup h4 {
+	font:12px Tahoma;
+	color:#333;	
+	padding:11px 0 11px 0;
+	text-align: center;
+	float:left;
+	width:189px;
+}
+
+a#dp-close {
+	font-size: 11px;
+	padding: 4px 0;
+	text-align: center;
+	display: block;
+}
+
+#calendar a#dp-close {
+	font-size: 11px;
+	padding: 4px 0;
+	text-align: center;
+	display: block;
+}
+
+a#dp-close:hover {
+	text-decoration: underline;
+}
+
+#calendar a#dp-close:hover {
+	text-decoration: underline;
+}
+
+div.dp-popup a {
+	color: #000;
+	text-decoration: none;
+	padding: 3px 2px 0;	
+}
+
+#calendar div.dp-popup td a {
+	color: #333;
+	font:bold 11px Tahoma;
+	text-decoration: none;
+	padding: 3px 2px;	
+}
+#calendar div.dp-popup td a:hover {
+	background:#DFDFDF;
+	color:#CC092F;
+}
+
+div.dp-popup div.dp-nav-prev {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 100px;
+}
+
+#calendar div.dp-popup div.dp-nav-prev {
+	position: static;
+	float:left;
+	width: 8px;
+	margin:11px 0;
+}
+
+div.dp-popup div.dp-nav-prev a {
+	float: left;
+	display:block;
+	text-indent:-9999px;
+	padding:0;
+}
+
+#calendar div.dp-popup div.dp-nav-prev a {
+	float: left;
+	display:block;
+	text-indent:-9999px;
+	padding:0;
+}
+
+.dp-nav-prev-year {display:none;}
+.dp-nav-prev-month {background:url(../../../imagens/geral/btn_seta_calendar_left.gif) top left no-repeat;width:18px;height:17px;}
+
+#calendar .dp-nav-prev-month {
+	background:url(../../../imagens/geral/btn_seta_calendar_left.gif) top left no-repeat;
+	width:8px;
+	height:13px;
+}
+
+/* Opera needs the rules to be this specific otherwise it doesn't change the cursor back to pointer after you have disabled and re-enabled a link */
+div.dp-popup div.dp-nav-prev a, div.dp-popup div.dp-nav-next a {
+	cursor: pointer;
+}
+
+#calendar div.dp-popup div.dp-nav-prev a, #calendar div.dp-popup div.dp-nav-next a {
+	cursor: pointer;
+}
+
+div.dp-popup div.dp-nav-prev a.disabled, div.dp-popup div.dp-nav-next a.disabled {
+	cursor: default;
+}
+
+#calendar div.dp-popup div.dp-nav-prev a.disabled, #calendar div.dp-popup div.dp-nav-next a.disabled {
+	cursor: default;
+}
+
+div.dp-popup div.dp-nav-next {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 100px;
+}
+
+#calendar div.dp-popup div.dp-nav-next {
+	position: static;
+	float:left;
+	width: 8px;
+	margin:11px 0;
+}
+
+div.dp-popup div.dp-nav-next a {
+	float: right;
+	display:block;
+	text-indent:-9999px;
+	padding:0;
+}
+
+#calendar div.dp-popup div.dp-nav-next a {
+	float: right;
+	display:block;
+	text-indent:-9999px;
+	padding:0;
+}
+
+.dp-nav-next-year {display:none;}
+.dp-nav-next-month {background:url(../../../imagens/geral/btn_seta_calendar_right.gif) top right no-repeat;width:18px;height:17px;}
+
+#calendar .dp-nav-next-month {
+	background:url(../../../imagens/geral/calendar_seta_right.gif) top left no-repeat;
+	width:8px;
+	height:13px;
+}
+
+div.dp-popup a.disabled {
+	cursor: default;
+	color: #aaa;
+}
+
+#calendar div.dp-popup a.disabled {
+	cursor: default;
+	color: #aaa;
+}
+
+div.dp-popup td {
+	cursor: pointer;
+}
+
+#calendar div.dp-popup td {
+	cursor: default;
+}
+
+div.dp-popup td.disabled {
+	cursor: default;
+}
+
+#calendar div.dp-popup td.disabled {
+	cursor: default;
+}
+
+a.dp-choose-date {
+	float: left;
+	width: 15px;
+	height: 16px;
+	padding: 0;
+	margin: 1px 0 0 5px;
+	display: block;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: url(../../../imagens/geral/btn_calendario.gif) no-repeat; 
+}
+
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+
+input.dp-applied {
+	float: left;
+}
+
+.calendario {background:#FFF;border:1px solid #CCC;display:none;padding:5px;position:absolute;}
+.calendario .topo {width:137px;}
+.calendario .topo a.voltar,
+.calendario .topo a.avancar {background:url(../../../imagens/geral/btn_seta_calendar_left.gif) top right no-repeat;font-size:0;float:left;display:block;text-indent:-9999px;width:18px;height:17px;}
+.calendario .topo a.avancar {background:url(../../../imagens/geral/btn_seta_calendar_right.gif) top right no-repeat;float:right;}
+.calendario .topo a.disabled, .calendario .topo a.disabled:hover{cursor: default;}
+.calendario .topo span.ano {float:left;font-weight:bold;text-align:center;width:100px;}
+.calendario td a {margin:3px;padding:5px;display:block;}
+.calendario td a.sel {background-color:#BF0101;color:#FFF;}
+.calendario td a.disabled {background-color:#BF0101;color:#FFF;}
+.calendario td a.disabled, .calendario td a.disabled:hover{cursor: default;background-color: #FFF;color: #CCC;text-decoration: none}
